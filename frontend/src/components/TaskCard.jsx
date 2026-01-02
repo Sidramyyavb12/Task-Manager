@@ -77,7 +77,7 @@ const TaskCard = ({ task, onEdit, onDelete, onStatusChange, isManager }) => {
                 <span>View Details</span>
               </Link>
               
-              {(isManager || task.assignedTo._id === task.assignedTo) && (
+              {isManager && (
                 <button
                   onClick={() => {
                     onEdit(task);
